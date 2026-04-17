@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            z-index: 100;
+        }
+        .static-box {
+            position: static;
+            background-color: lightgray;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .relative-box {
+            position: relative;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .container {
+            position: relative;
+            border: 1px solid black;
+            margin: 20px 10px;
+            padding: 20px;
+            min-height: 80px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            background-color: yellow;
+            padding: 5px 10px;
+            top: 10px;
+            right: 10px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sticky-header">Sticky Header</div>
+
+    <div class="static-box">Static Box (Default Position)</div>
+
+    <div class="relative-box">Relative Box (Moved Down and Right)</div>
+
+    <div class="container">
+        Container (Relative Parent)
+        <div class="absolute-box">Absolute Box</div>
+    </div>
+
+    <div class="fixed-box">Fixed Box</div>
+
+</body>
+</html>
